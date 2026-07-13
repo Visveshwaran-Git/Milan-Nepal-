@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, useCallback } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence, useMotionValueEvent, useScroll } from "framer-motion";
 
 const navLinks = [
@@ -64,14 +65,25 @@ export default function Navbar() {
           <a
             href="#hero"
             onClick={(e) => handleNavClick(e, "#hero")}
-            className="flex flex-col leading-tight"
+            className="flex items-center gap-3"
           >
-            <span className="font-heading text-xl font-bold tracking-wide text-gold sm:text-2xl">
-              Milan Nepal
-            </span>
-            <span className="text-[10px] font-light uppercase tracking-[0.3em] text-ivory/60 sm:text-xs">
-              Saptarangi · Westend
-            </span>
+            <div className="flex h-10 w-24 items-center justify-center rounded bg-ivory/95 p-1 transition-transform hover:scale-105">
+              <Image
+                src="/images/saptarangi-logo.png"
+                alt="Ravintola Saptarangi Logo"
+                width={90}
+                height={35}
+                className="object-contain"
+              />
+            </div>
+            <div className="flex flex-col leading-tight hidden sm:flex">
+              <span className="font-heading text-xl font-bold tracking-wide text-gold sm:text-2xl">
+                Milan Nepal
+              </span>
+              <span className="text-[10px] font-light uppercase tracking-[0.3em] text-ivory/60 sm:text-xs">
+                Westend
+              </span>
+            </div>
           </a>
 
           {/* Desktop Nav */}

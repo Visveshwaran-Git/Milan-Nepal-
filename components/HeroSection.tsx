@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 
 export default function HeroSection() {
@@ -44,15 +45,26 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Restaurant name */}
-        <motion.h1
-          className="font-heading text-5xl font-bold leading-tight text-ivory sm:text-6xl md:text-7xl lg:text-8xl"
+        {/* Restaurant logo and name */}
+        <motion.div
+          className="mb-6 flex flex-col items-center justify-center gap-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          Milan Nepal
-        </motion.h1>
+          <div className="rounded-2xl bg-ivory/95 p-4 shadow-2xl md:p-5">
+            <Image
+              src="/images/saptarangi-logo.png"
+              alt="Ravintola Saptarangi Logo"
+              width={220}
+              height={80}
+              className="object-contain"
+            />
+          </div>
+          <h1 className="font-heading text-5xl font-bold leading-tight text-ivory sm:text-6xl md:text-7xl lg:text-8xl">
+            Milan Nepal
+          </h1>
+        </motion.div>
 
         <motion.p
           className="mt-2 font-heading text-lg font-light tracking-[0.25em] text-gold sm:text-xl md:text-2xl"
@@ -60,7 +72,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          WESTEND · SAPTARANGI
+          WESTEND
         </motion.p>
 
         {/* Tagline */}
