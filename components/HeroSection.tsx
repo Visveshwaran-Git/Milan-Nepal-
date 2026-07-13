@@ -52,19 +52,10 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <h1 className="font-heading text-5xl font-bold leading-tight text-ivory sm:text-6xl md:text-7xl lg:text-8xl">
-            Milan Nepal
+          <h1 className="font-heading text-4xl font-bold leading-tight text-ivory sm:text-5xl md:text-6xl lg:text-7xl">
+            Milan Nepal Westend Saptarangi
           </h1>
         </motion.div>
-
-        <motion.p
-          className="mt-2 font-heading text-lg font-light tracking-[0.25em] text-gold sm:text-xl md:text-2xl"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-        >
-          WESTEND
-        </motion.p>
 
         {/* Tagline */}
         <motion.p
