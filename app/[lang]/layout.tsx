@@ -122,6 +122,10 @@ function JsonLd() {
   );
 }
 
+export async function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'fi' }, { lang: 'sv' }];
+}
+
 export default async function RootLayout({
   children,
   params,
