@@ -45,22 +45,13 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Restaurant logo and name */}
+        {/* Restaurant name */}
         <motion.div
           className="mb-6 flex flex-col items-center justify-center gap-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <div className="rounded-2xl bg-ivory/95 p-4 shadow-2xl md:p-5">
-            <Image
-              src="/images/saptarangi-logo.png"
-              alt="Ravintola Saptarangi Logo"
-              width={220}
-              height={80}
-              className="object-contain"
-            />
-          </div>
           <h1 className="font-heading text-5xl font-bold leading-tight text-ivory sm:text-6xl md:text-7xl lg:text-8xl">
             Milan Nepal
           </h1>
@@ -94,24 +85,14 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.9 }}
         >
           <a
-            href="#reserve"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector("#reserve")?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="inline-flex min-h-[48px] items-center rounded-sm bg-gold px-8 py-3 font-body text-sm font-semibold uppercase tracking-widest text-charcoal transition-all hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20 active:scale-95"
-          >
-            Reserve a Table
-          </a>
-          <a
             href="#order"
             onClick={(e) => {
               e.preventDefault();
               document.querySelector("#order")?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="inline-flex min-h-[48px] items-center rounded-sm border border-ivory/30 bg-ivory/5 px-8 py-3 font-body text-sm font-semibold uppercase tracking-widest text-ivory transition-all hover:border-ivory/60 hover:bg-ivory/10 active:scale-95"
+            className="inline-flex min-h-[48px] items-center rounded-sm bg-gold px-8 py-3 font-body text-sm font-semibold uppercase tracking-widest text-charcoal transition-all hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20 active:scale-95"
           >
-            Order Online
+            Order on Wolt
           </a>
         </motion.div>
       </div>

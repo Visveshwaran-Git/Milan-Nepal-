@@ -9,7 +9,6 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#menu", label: "Menu" },
   { href: "#gallery", label: "Gallery" },
-  { href: "#reserve", label: "Reserve" },
   { href: "#location", label: "Location" },
 ];
 
@@ -65,24 +64,16 @@ export default function Navbar() {
           <a
             href="#hero"
             onClick={(e) => handleNavClick(e, "#hero")}
-            className="flex items-center gap-3"
+            className="flex items-center gap-3 transition-transform hover:scale-105"
           >
-            <div className="flex h-10 w-24 items-center justify-center rounded bg-ivory/95 p-1 transition-transform hover:scale-105">
+            <div className="flex h-12 w-auto items-center justify-center rounded bg-ivory p-1.5 shadow-sm">
               <Image
                 src="/images/saptarangi-logo.png"
                 alt="Ravintola Saptarangi Logo"
-                width={90}
-                height={35}
-                className="object-contain"
+                width={120}
+                height={40}
+                className="object-contain h-full w-auto"
               />
-            </div>
-            <div className="flex flex-col leading-tight hidden sm:flex">
-              <span className="font-heading text-xl font-bold tracking-wide text-gold sm:text-2xl">
-                Milan Nepal
-              </span>
-              <span className="text-[10px] font-light uppercase tracking-[0.3em] text-ivory/60 sm:text-xs">
-                Westend
-              </span>
             </div>
           </a>
 
@@ -101,11 +92,11 @@ export default function Navbar() {
             ))}
             <li>
               <a
-                href="#reserve"
-                onClick={(e) => handleNavClick(e, "#reserve")}
+                href="#order"
+                onClick={(e) => handleNavClick(e, "#order")}
                 className="rounded-sm border border-gold bg-gold/10 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-gold transition-all hover:bg-gold hover:text-charcoal"
               >
-                Reserve
+                Order Online
               </a>
             </li>
           </ul>
@@ -161,14 +152,14 @@ export default function Navbar() {
                 </motion.a>
               ))}
               <motion.a
-                href="#reserve"
-                onClick={(e) => handleNavClick(e, "#reserve")}
+                href="#order"
+                onClick={(e) => handleNavClick(e, "#order")}
                 className="mt-4 rounded-sm border border-gold bg-gold/10 px-8 py-3 font-heading text-xl font-semibold text-gold transition-all hover:bg-gold hover:text-charcoal"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: navLinks.length * 0.08, duration: 0.3 }}
               >
-                Reserve a Table
+                Order Online
               </motion.a>
             </nav>
 
