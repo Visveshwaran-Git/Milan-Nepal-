@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+/* ── Tailwind v4 Theme Tokens ─────────────────────────────────────── */
+@theme inline {
+  /* Brand colors */
+  --color-maroon: #7A1E2B;
+  --color-maroon-light: #9B2D3C;
+  --color-maroon-dark: #5C1620;
+  --color-gold: #C89B3C;
+  --color-gold-light: #D4AF5C;
+  --color-gold-dark: #A17E2F;
+  --color-charcoal: #1A1512;
+  --color-charcoal-light: #2A2520;
+  --color-ivory: #F5EEE0;
+  --color-ivory-dark: #E8DFD0;
+  --color-warm-gray: #8A7E72;
+
+  /* Fonts — variables set by next/font/google in layout.tsx */
+  --font-heading: var(--font-cormorant), "Georgia", serif;
+  --font-body: var(--font-worksans), "Inter", system-ui, sans-serif;
+
+  /* Spacing & sizing */
+  --spacing-section: 6rem;
+  --spacing-section-mobile: 3.5rem;
+}
+
+/* ── Base Styles ──────────────────────────────────────────────────── */
+:root {
+  --background: #1A1512;
+  --foreground: #F5EEE0;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Typography ───────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+/* ── Selection ────────────────────────────────────────────────────── */
+::selection {
+  background-color: rgba(200, 155, 60, 0.3);
+  color: #F5EEE0;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1512;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5C1620;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7A1E2B;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #5C1620 #1A1512;
+}
+
+/* ── Mandala Decorative Divider ───────────────────────────────────── */
+.mandala-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.mandala-divider::before,
+.mandala-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(200, 155, 60, 0.4),
+    transparent
+  );
+}
+
+.mandala-icon {
+  width: 28px;
+  height: 28px;
+  opacity: 0.6;
+  color: #C89B3C;
+}
+
+/* ── Prayer Flag Accent ───────────────────────────────────────────── */
+.prayer-flag-bar {
+  display: flex;
+  height: 4px;
+  width: 100%;
+  max-width: 280px;
+  margin: 1.5rem auto;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.prayer-flag-bar span {
+  flex: 1;
+}
+
+.prayer-flag-bar span:nth-child(1) { background: #1a4480; }
+.prayer-flag-bar span:nth-child(2) { background: #f5f5f5; }
+.prayer-flag-bar span:nth-child(3) { background: #d4382e; }
+.prayer-flag-bar span:nth-child(4) { background: #2e7d32; }
+.prayer-flag-bar span:nth-child(5) { background: #C89B3C; }
+
+/* ── Menu Flipbook ────────────────────────────────────────────────── */
+.stf__wrapper {
+  margin: 0 auto;
+}
+
+.menu-page {
+  background: linear-gradient(135deg, #F5EEE0 0%, #E8DFD0 100%);
+  border: 1px solid rgba(200, 155, 60, 0.2);
+  overflow-y: auto;
+}
+
+.menu-page::-webkit-scrollbar {
+  width: 4px;
+}
+
+.menu-page::-webkit-scrollbar-thumb {
+  background: rgba(122, 30, 43, 0.3);
+  border-radius: 2px;
+}
+
+/* ── Smooth Transitions ──────────────────────────────────────────── */
+a, button {
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* ── Focus Styles ─────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #C89B3C;
+  outline-offset: 2px;
+}
+
+/* ── Reduced Motion ───────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .parallax-bg {
+    transform: none !important;
+  }
+}
+
+/* ── Glass Effect Utility ─────────────────────────────────────────── */
+.glass {
+  background: rgba(26, 21, 18, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(200, 155, 60, 0.15);
+}
+
+/* ── Gradient Text ────────────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #C89B3C, #D4AF5C, #C89B3C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
