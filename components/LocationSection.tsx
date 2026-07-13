@@ -3,6 +3,7 @@
 import React from "react";
 import ScrollReveal from "./ScrollReveal";
 import MandalaDecor from "./MandalaDecor";
+import { useTranslation } from "./LanguageProvider";
 
 const hours = [
   { day: "Monday", time: "10:30 – 21:00" },
@@ -15,6 +16,7 @@ const hours = [
 ];
 
 export default function LocationSection() {
+  const dict = useTranslation();
   // Highlight today
   const todayIdx = new Date().getDay(); // 0=Sun, 1=Mon, ...
   const dayMap = [6, 0, 1, 2, 3, 4, 5]; // Map JS getDay to our hours array index
@@ -26,10 +28,10 @@ export default function LocationSection() {
         <ScrollReveal>
           <div className="text-center">
             <p className="font-body text-sm font-semibold uppercase tracking-[0.3em] text-gold">
-              Find Us
+              {dict.location?.title}
             </p>
             <h2 className="mt-3 font-heading text-4xl font-bold text-ivory sm:text-5xl">
-              Visit Our Restaurant
+              {dict.location?.subtitle}
             </h2>
             <MandalaDecor />
           </div>
@@ -58,18 +60,17 @@ export default function LocationSection() {
               {/* Address */}
               <div>
                 <h3 className="font-heading text-xl font-semibold text-ivory">
-                  Address
+                  {dict.location?.addressTitle}
                 </h3>
-                <p className="mt-2 text-ivory/70">
-                  Westendintie 99 D<br />
-                  02160 Espoo, Finland
+                <p className="mt-2 text-ivory/70 whitespace-pre-line">
+                  {dict.location?.addressVal}
                 </p>
                 <div className="mt-2 flex flex-wrap gap-2">
                   <span className="rounded-full bg-gold/10 px-3 py-1 text-xs font-medium text-gold">
-                    Near Tapiola
+                    {dict.location?.parking}
                   </span>
                   <span className="rounded-full bg-ivory/10 px-3 py-1 text-xs font-medium text-ivory/60">
-                    🅿️ Free Parking
+                    {dict.location?.freeParking}
                   </span>
                 </div>
               </div>
@@ -77,7 +78,7 @@ export default function LocationSection() {
               {/* Hours table */}
               <div>
                 <h3 className="font-heading text-xl font-semibold text-ivory">
-                  Opening Hours
+                  {dict.location?.hoursTitle}
                 </h3>
                 <div className="mt-3 space-y-1">
                   {hours.map((h, idx) => (
@@ -95,7 +96,7 @@ export default function LocationSection() {
                   ))}
                 </div>
                 <p className="mt-2 text-xs text-ivory/40 italic">
-                  Lunch served weekdays 10:30 – 15:00
+                  {dict.location?.lunchServed}
                 </p>
               </div>
 
@@ -108,7 +109,7 @@ export default function LocationSection() {
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                   </svg>
-                  Call Us
+                  {dict.location?.callUs}
                 </a>
 
                 <a
@@ -121,7 +122,7 @@ export default function LocationSection() {
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
-                  Get Directions
+                  {dict.location?.getDirections}
                 </a>
               </div>
             </div>

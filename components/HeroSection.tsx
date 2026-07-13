@@ -3,8 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import { useTranslation } from "./LanguageProvider";
 
 export default function HeroSection() {
+  const dict = useTranslation();
   const prefersReducedMotion = useReducedMotion();
   const { scrollY } = useScroll();
   const bgY = useTransform(scrollY, [0, 600], [0, 150]);
@@ -53,7 +55,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <h1 className="font-heading text-4xl font-bold leading-tight text-ivory sm:text-5xl md:text-6xl lg:text-7xl">
-            Milan Nepal Westend Saptarangi
+            {dict.hero?.title}
           </h1>
         </motion.div>
 
@@ -64,8 +66,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
-          Aromatic, deeply flavored Himalayan cuisine — fresh ingredients,
-          heady spices, vibrant colors
+          {dict.hero?.tagline}
         </motion.p>
 
         {/* CTA Buttons */}
@@ -83,7 +84,7 @@ export default function HeroSection() {
             }}
             className="inline-flex min-h-[48px] items-center rounded-sm bg-gold px-8 py-3 font-body text-sm font-semibold uppercase tracking-widest text-charcoal transition-all hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20 active:scale-95"
           >
-            Order on Wolt
+            {dict.hero?.orderOnWolt}
           </a>
         </motion.div>
       </div>
@@ -101,7 +102,7 @@ export default function HeroSection() {
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
           <span className="text-[10px] uppercase tracking-[0.3em] text-ivory/40">
-            Scroll
+            {dict.hero?.scroll}
           </span>
           <svg
             width="20"

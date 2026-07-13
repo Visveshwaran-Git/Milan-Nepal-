@@ -6,18 +6,15 @@ import { useReducedMotion } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
 import MandalaDecor from "./MandalaDecor";
 import MenuTabs from "./MenuTabs";
+import { useTranslation } from "./LanguageProvider";
 
 // Dynamically import flipbook — no SSR, with loading state
 const MenuFlipbook = dynamic(() => import("./MenuFlipbook"), {
   ssr: false,
-  loading: () => (
-    <div className="flex min-h-[400px] items-center justify-center">
-      <div className="animate-pulse text-ivory/40">Loading menu…</div>
-    </div>
-  ),
 });
 
 export default function MenuSection() {
+  const dict = useTranslation();
   const prefersReducedMotion = useReducedMotion();
   const [flipbookFailed, setFlipbookFailed] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -38,15 +35,14 @@ export default function MenuSection() {
         <ScrollReveal>
           <div className="text-center">
             <p className="font-body text-sm font-semibold uppercase tracking-[0.3em] text-gold">
-              Discover
+              {dict.menu?.subtitle}
             </p>
             <h2 className="mt-3 font-heading text-4xl font-bold text-ivory sm:text-5xl">
-              Our Menu
+              {dict.menu?.title}
             </h2>
             <MandalaDecor />
             <p className="mx-auto mt-2 max-w-xl text-ivory/60">
-              From aromatic starters to hearty mains, each dish is crafted with
-              authentic Himalayan spices and the freshest ingredients.
+              {dict.menu?.description}
             </p>
           </div>
         </ScrollReveal>
@@ -54,7 +50,7 @@ export default function MenuSection() {
         <div className="mt-12">
           {!isMounted ? (
             <div className="flex min-h-[400px] items-center justify-center">
-              <div className="animate-pulse text-ivory/40">Loading menu…</div>
+              <div className="animate-pulse text-ivory/40">{dict.menu?.loading}</div>
             </div>
           ) : useFallback ? (
             <MenuTabs />
@@ -62,7 +58,7 @@ export default function MenuSection() {
             <React.Suspense
               fallback={
                 <div className="flex min-h-[400px] items-center justify-center">
-                  <div className="animate-pulse text-ivory/40">Loading menu…</div>
+                  <div className="animate-pulse text-ivory/40">{dict.menu?.loading}</div>
                 </div>
               }
             >

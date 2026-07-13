@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "./LanguageProvider";
 
 export default function Footer() {
+  const dict = useTranslation();
   return (
     <footer className="bg-charcoal border-t border-ivory/10">
       <div className="mx-auto max-w-7xl px-6 py-16">
@@ -14,8 +16,7 @@ export default function Footer() {
               Saptarangi · Westend
             </p>
             <p className="mt-4 text-sm leading-relaxed text-ivory/60">
-              Authentic Himalayan cuisine crafted with love, fresh ingredients,
-              and generations of tradition.
+              {dict.footer?.description}
             </p>
             {/* Prayer flag */}
             <div className="prayer-flag-bar mt-4 !mx-0 !max-w-[120px]">
@@ -26,15 +27,15 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="font-heading text-sm font-semibold uppercase tracking-widest text-ivory">
-              Quick Links
+              {dict.footer?.quickLinks}
             </h4>
             <ul className="mt-4 space-y-2">
               {[
-                { href: "#about", label: "Our Story" },
-                { href: "#menu", label: "Menu" },
-                { href: "#gallery", label: "Gallery" },
-                { href: "#reserve", label: "Reservations" },
-                { href: "#location", label: "Location" },
+                { href: "#about", label: dict.nav?.about },
+                { href: "#menu", label: dict.nav?.menu },
+                { href: "#gallery", label: dict.nav?.gallery },
+                { href: "#reserve", label: dict.nav?.reserve },
+                { href: "#location", label: dict.nav?.location },
               ].map((link) => (
                 <li key={link.href}>
                   <a
@@ -51,7 +52,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-heading text-sm font-semibold uppercase tracking-widest text-ivory">
-              Contact
+              {dict.footer?.contact}
             </h4>
             <ul className="mt-4 space-y-3 text-sm text-ivory/50">
               <li>
@@ -63,30 +64,30 @@ export default function Footer() {
                 Westendintie 99 D<br />
                 02160 Espoo, Finland
               </li>
-              <li className="text-xs text-ivory/30 italic">Near Tapiola · Free parking</li>
+              <li className="text-xs text-ivory/30 italic">{dict.footer?.parkingInfo}</li>
             </ul>
           </div>
 
           {/* Hours & Social */}
           <div>
             <h4 className="font-heading text-sm font-semibold uppercase tracking-widest text-ivory">
-              Hours
+              {dict.footer?.hours}
             </h4>
             <ul className="mt-4 space-y-1 text-sm text-ivory/50">
               <li className="flex justify-between">
-                <span>Mon–Thu</span>
+                <span>{dict.footer?.monThu}</span>
                 <span>10:30 – 21:00</span>
               </li>
               <li className="flex justify-between">
-                <span>Friday</span>
+                <span>{dict.footer?.friday}</span>
                 <span>10:30 – 22:00</span>
               </li>
               <li className="flex justify-between">
-                <span>Saturday</span>
+                <span>{dict.footer?.saturday}</span>
                 <span>12:00 – 22:00</span>
               </li>
               <li className="flex justify-between">
-                <span>Sunday</span>
+                <span>{dict.footer?.sunday}</span>
                 <span>12:00 – 21:00</span>
               </li>
             </ul>
@@ -125,11 +126,11 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 border-t border-ivory/10 pt-8 text-center">
           <p className="text-xs text-ivory/30">
-            © {new Date().getFullYear()} Milan Nepal – Saptarangi. All rights reserved.
+            © {new Date().getFullYear()} Milan Nepal – Saptarangi. {dict.footer?.allRightsReserved}
           </p>
           {/* TODO: Add Finnish language toggle */}
           <p className="mt-1 text-[10px] text-ivory/20">
-            🇫🇮 Suomeksi — Coming soon
+            🇫🇮 Suomeksi — {dict.footer?.comingSoon}
           </p>
         </div>
       </div>

@@ -3,19 +3,22 @@
 import React, { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, useMotionValueEvent, useScroll } from "framer-motion";
-
-const navLinks = [
-  { href: "#hero", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#menu", label: "Menu" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#location", label: "Location" },
-];
+import { useTranslation, useLang } from "./LanguageProvider";
 
 export default function Navbar() {
+  const dict = useTranslation();
+  const lang = useLang();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { scrollY } = useScroll();
+
+  const navLinks = [
+    { href: "#hero", label: dict.navbar?.home || "Home" },
+    { href: "#about", label: dict.navbar?.about || "About" },
+    { href: "#menu", label: dict.navbar?.menu || "Menu" },
+    { href: "#gallery", label: dict.navbar?.gallery || "Gallery" },
+    { href: "#location", label: dict.navbar?.location || "Location" },
+  ];
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 50);
@@ -78,7 +81,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Nav */}
-          <ul className="hidden items-center gap-8 lg:flex">
+          <ul className="hidden items-center gap-6 lg:flex">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
@@ -90,40 +93,68 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
+            <li className="ml-2 flex gap-3 border-l border-ivory/20 pl-6">
+              {['en', 'fi', 'sv'].map((l) => (
+                <a
+                  key={l}
+                  href={`/${l}`}
+                  className={`font-body text-sm font-bold uppercase tracking-widest transition-colors ${
+                    lang === l ? "text-gold" : "text-ivory/50 hover:text-ivory"
+                  }`}
+                >
+                  {l}
+                </a>
+              ))}
+            </li>
             <li>
               <a
                 href="#order"
                 onClick={(e) => handleNavClick(e, "#order")}
-                className="rounded-sm border border-gold bg-gold/10 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-gold transition-all hover:bg-gold hover:text-charcoal"
+                className="ml-2 rounded-sm border border-gold bg-gold/10 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-gold transition-all hover:bg-gold hover:text-charcoal"
               >
-                Order Online
+                {dict.navbar?.orderOnline || "Order Online"}
               </a>
             </li>
           </ul>
 
-          {/* Mobile Hamburger */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="relative z-50 flex h-11 w-11 flex-col items-center justify-center gap-1.5 lg:hidden"
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            aria-expanded={mobileOpen}
-          >
-            <motion.span
-              className="block h-0.5 w-6 bg-ivory"
-              animate={mobileOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-              transition={{ duration: 0.2 }}
-            />
-            <motion.span
-              className="block h-0.5 w-6 bg-ivory"
-              animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
-              transition={{ duration: 0.2 }}
-            />
-            <motion.span
-              className="block h-0.5 w-6 bg-ivory"
-              animate={mobileOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-              transition={{ duration: 0.2 }}
-            />
-          </button>
+          {/* Mobile Hamburger & Lang */}
+          <div className="flex items-center gap-4 lg:hidden">
+            <div className="flex gap-2">
+              {['en', 'fi', 'sv'].map((l) => (
+                <a
+                  key={l}
+                  href={`/${l}`}
+                  className={`font-body text-xs font-bold uppercase tracking-widest transition-colors ${
+                    lang === l ? "text-gold" : "text-ivory/50 hover:text-ivory"
+                  }`}
+                >
+                  {l}
+                </a>
+              ))}
+            </div>
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="relative z-50 flex h-11 w-11 flex-col items-center justify-center gap-1.5"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+            >
+              <motion.span
+                className="block h-0.5 w-6 bg-ivory"
+                animate={mobileOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+                transition={{ duration: 0.2 }}
+              />
+              <motion.span
+                className="block h-0.5 w-6 bg-ivory"
+                animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
+                transition={{ duration: 0.2 }}
+              />
+              <motion.span
+                className="block h-0.5 w-6 bg-ivory"
+                animate={mobileOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+                transition={{ duration: 0.2 }}
+              />
+            </button>
+          </div>
         </nav>
       </motion.header>
 
@@ -159,7 +190,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: navLinks.length * 0.08, duration: 0.3 }}
               >
-                Order Online
+                {dict.navbar?.orderOnline || "Order Online"}
               </motion.a>
             </nav>
 

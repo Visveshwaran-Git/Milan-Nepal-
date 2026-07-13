@@ -3,8 +3,10 @@
 import React from "react";
 import ScrollReveal from "./ScrollReveal";
 import MandalaDecor from "./MandalaDecor";
+import { useTranslation } from "./LanguageProvider";
 
 export default function AboutSection() {
+  const dict = useTranslation();
   return (
     <section id="about" className="relative overflow-hidden bg-charcoal py-20 sm:py-28 lg:py-32">
       <div className="mx-auto max-w-7xl px-6">
@@ -13,52 +15,41 @@ export default function AboutSection() {
           <ScrollReveal direction="left">
             <div>
               <p className="font-body text-sm font-semibold uppercase tracking-[0.3em] text-gold">
-                Our Story
+                {dict.about?.ourStory}
               </p>
               <h2 className="mt-3 font-heading text-4xl font-bold text-ivory sm:text-5xl">
-                A Taste of the{" "}
-                <span className="gradient-text">Himalayas</span>
+                {dict.about?.title1}
+                <span className="gradient-text">{dict.about?.title2}</span>
               </h2>
 
               <MandalaDecor className="max-w-xs !mx-0" />
 
               <div className="space-y-5 text-ivory/75">
                 <p>
-                  Nestled in the heart of Westend, Espoo, <strong className="text-ivory">Milan Nepal – Saptarangi</strong> brings
-                  the authentic flavors of Nepal and the greater Himalayan region to Finland.
-                  Our name, <em>Saptarangi</em>, means &quot;seven colors&quot; — a celebration
-                  of the vibrant, multi-hued tapestry of Himalayan cuisine.
+                  {dict.about?.p1_1}<strong className="text-ivory">{dict.about?.p1_strong}</strong>{dict.about?.p1_2}
+                  <em>{dict.about?.p1_em}</em>{dict.about?.p1_3}
                 </p>
-                <p>
-                  Every dish begins with the freshest ingredients — hand-ground spice blends,
-                  aromatic herbs, and time-honored recipes passed down through generations.
-                  From our tandoor-grilled meats to our slow-simmered curries, each plate
-                  is a journey through the aromatic kitchens of Kathmandu, Pokhara, and beyond.
-                </p>
-                <p>
-                  We believe in family hospitality. When you dine with us, you&apos;re not just
-                  a guest — you&apos;re family. Our warm, welcoming atmosphere and attentive
-                  service are as much a part of the experience as the food itself.
-                </p>
+                <p>{dict.about?.p2}</p>
+                <p>{dict.about?.p3}</p>
               </div>
 
               <div className="mt-8 flex flex-wrap gap-6">
                 <div className="text-center">
                   <p className="font-heading text-3xl font-bold text-gold">10+</p>
                   <p className="mt-1 text-xs uppercase tracking-widest text-ivory/50">
-                    Years of Tradition
+                    {dict.about?.yearsOfTradition}
                   </p>
                 </div>
                 <div className="text-center">
                   <p className="font-heading text-3xl font-bold text-gold">40+</p>
                   <p className="mt-1 text-xs uppercase tracking-widest text-ivory/50">
-                    Authentic Dishes
+                    {dict.about?.authenticDishes}
                   </p>
                 </div>
                 <div className="text-center">
                   <p className="font-heading text-3xl font-bold text-gold">100%</p>
                   <p className="mt-1 text-xs uppercase tracking-widest text-ivory/50">
-                    Fresh Ingredients
+                    {dict.about?.freshIngredients}
                   </p>
                 </div>
               </div>

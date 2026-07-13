@@ -1,0 +1,82 @@
+{
+  "navbar": {
+    "home": "Hem",
+    "about": "Om oss",
+    "menu": "Meny",
+    "gallery": "Galleri",
+    "location": "Hitta hit",
+    "orderOnline": "Beställ online"
+  },
+  "hero": {
+    "title": "Milan Nepal Westend Saptarangi",
+    "tagline": "Aromatisk och smakrik mat från Himalaya — färska ingredienser, berusande kryddor, livfulla färger",
+    "orderOnWolt": "Beställ på Wolt",
+    "scroll": "Skrolla"
+  },
+  "about": {
+    "ourStory": "Vår historia",
+    "title1": "Smaker från ",
+    "title2": "Himalaya",
+    "p1_1": "Beläget i hjärtat av Westend, Esbo, tar ",
+    "p1_strong": "Milan Nepal – Saptarangi",
+    "p1_2": " de autentiska smakerna från Nepal och Himalaya till Finland. Vårt namn, ",
+    "p1_em": "Saptarangi",
+    "p1_3": ", betyder \"sju färger\" — en hyllning till det livfulla och färgstarka köket från Himalaya.",
+    "p2": "Varje rätt börjar med de färskaste ingredienserna — handmalda kryddblandningar, aromatiska örter och traditionella recept som gått i arv i generationer. Från vårt tandoori-grillade kött till våra långkokta curryrätter, varje tallrik är en resa genom de aromatiska köken i Kathmandu, Pokhara och bortom.",
+    "p3": "Vi tror på familjegästfrihet. När du äter hos oss är du inte bara en gäst — du är familj. Vår varma, välkomnande atmosfär och uppmärksamma service är lika mycket en del av upplevelsen som själva maten.",
+    "yearsOfTradition": "År av tradition",
+    "authenticDishes": "Autentiska rätter",
+    "freshIngredients": "Färska råvaror"
+  },
+  "menu": {
+    "title": "Vår meny",
+    "subtitle": "Upptäck",
+    "description": "Från aromatiska förrätter till rejäla huvudrätter, varje rätt är tillagad med autentiska kryddor från Himalaya och de färskaste ingredienserna.",
+    "loading": "Laddar meny…"
+  },
+  "gallery": {
+    "subtitle": "Galleri",
+    "title": "En visuell fest"
+  },
+  "order": {
+    "orderOnline": "Beställ online",
+    "enjoyAtHome": "Njut hemma",
+    "description": "Har du inte tid att besöka restaurangen? Beställ dina favoriträtter från Himalaya för hemleverans via Wolt, eller ring oss för avhämtning.",
+    "orderOnWolt": "Beställ på Wolt",
+    "callForTakeaway": "Ring för avhämtning",
+    "info": "Hemleverans via Wolt · Avhämtning via telefon: +358 44 777 3636"
+  },
+  "location": {
+    "title": "Hitta oss",
+    "subtitle": "Besök vår restaurang",
+    "addressTitle": "Adress",
+    "addressVal": "Westendintie 99 D\\n02160 Esbo, Finland",
+    "parking": "Nära Hagalund",
+    "freeParking": "🅿️ Gratis parkering",
+    "hoursTitle": "Öppettider",
+    "lunchServed": "Lunch serveras vardagar 10:30 – 15:00",
+    "callUs": "Ring oss",
+    "getDirections": "Få vägbeskrivning"
+  },
+  "footer": {
+    "description": "Autentiskt Himalaya-kök skapat med kärlek, färska råvaror och generationers tradition.",
+    "quickLinks": "Snabblänkar",
+    "contact": "Kontakt",
+    "parkingInfo": "Nära Hagalund · Gratis parkering",
+    "hours": "Öppettider",
+    "monThu": "Mån–Tor",
+    "friday": "Fredag",
+    "saturday": "Lördag",
+    "sunday": "Söndag",
+    "followUs": "Följ oss",
+    "allRightsReserved": "Alla rättigheter förbehållna.",
+    "comingSoon": "Kommer snart"
+  },
+  "nav": {
+    "about": "Vår historia",
+    "menu": "Meny",
+    "gallery": "Galleri",
+    "reserve": "Bokningar",
+    "location": "Plats"
+  }
+}

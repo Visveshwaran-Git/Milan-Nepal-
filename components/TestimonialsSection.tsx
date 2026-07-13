@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
 import MandalaDecor from "./MandalaDecor";
+import { useTranslation } from "./LanguageProvider";
 
 const testimonials = [
   {
@@ -37,6 +38,7 @@ const testimonials = [
 ];
 
 export default function TestimonialsSection() {
+  const dict = useTranslation();
   return (
     <section className="bg-charcoal-light py-20 sm:py-28">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
@@ -45,10 +47,10 @@ export default function TestimonialsSection() {
         <ScrollReveal>
           <div className="text-center">
             <p className="font-body text-sm font-semibold uppercase tracking-[0.3em] text-gold">
-              Testimonials
+              {dict.testimonials?.subtitle || "Testimonials"}
             </p>
             <h2 className="mt-3 font-heading text-4xl font-bold text-ivory sm:text-5xl">
-              What Our Guests Say
+              {dict.testimonials?.title || "What Our Guests Say"}
             </h2>
             <MandalaDecor />
           </div>

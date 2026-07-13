@@ -2,8 +2,10 @@
 
 import React from "react";
 import ScrollReveal from "./ScrollReveal";
+import { useTranslation } from "./LanguageProvider";
 
 export default function OrderSection() {
+  const dict = useTranslation();
   return (
     <section
       id="order"
@@ -20,14 +22,13 @@ export default function OrderSection() {
       <div className="relative mx-auto max-w-4xl px-6 text-center">
         <ScrollReveal>
           <p className="font-body text-sm font-semibold uppercase tracking-[0.3em] text-gold-light">
-            Order Online
+            {dict.order?.orderOnline}
           </p>
           <h2 className="mt-3 font-heading text-4xl font-bold text-ivory sm:text-5xl">
-            Enjoy at Home
+            {dict.order?.enjoyAtHome}
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-ivory/80">
-            Can&apos;t make it to the restaurant? Order your favorite Himalayan dishes
-            for delivery through Wolt, or call us for takeaway.
+            {dict.order?.description}
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-5 sm:flex-row sm:justify-center">
@@ -42,7 +43,7 @@ export default function OrderSection() {
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8l-9 9z" />
               </svg>
-              Order on Wolt
+              {dict.order?.orderOnWolt}
             </a>
 
             {/* Phone Takeaway */}
@@ -53,12 +54,12 @@ export default function OrderSection() {
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
               </svg>
-              Call for Takeaway
+              {dict.order?.callForTakeaway}
             </a>
           </div>
 
           <p className="mt-6 text-xs text-ivory/50">
-            Delivery available through Wolt · Takeaway by phone: +358 44 777 3636
+            {dict.order?.info}
           </p>
         </ScrollReveal>
       </div>

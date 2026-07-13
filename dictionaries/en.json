@@ -1,0 +1,82 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "menu": "Menu",
+    "gallery": "Gallery",
+    "location": "Location",
+    "orderOnline": "Order Online"
+  },
+  "hero": {
+    "title": "Milan Nepal Westend Saptarangi",
+    "tagline": "Aromatic, deeply flavored Himalayan cuisine — fresh ingredients, heady spices, vibrant colors",
+    "orderOnWolt": "Order on Wolt",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "ourStory": "Our Story",
+    "title1": "A Taste of the ",
+    "title2": "Himalayas",
+    "p1_1": "Nestled in the heart of Westend, Espoo, ",
+    "p1_strong": "Milan Nepal – Saptarangi",
+    "p1_2": " brings the authentic flavors of Nepal and the greater Himalayan region to Finland. Our name, ",
+    "p1_em": "Saptarangi",
+    "p1_3": ", means \"seven colors\" — a celebration of the vibrant, multi-hued tapestry of Himalayan cuisine.",
+    "p2": "Every dish begins with the freshest ingredients — hand-ground spice blends, aromatic herbs, and time-honored recipes passed down through generations. From our tandoor-grilled meats to our slow-simmered curries, each plate is a journey through the aromatic kitchens of Kathmandu, Pokhara, and beyond.",
+    "p3": "We believe in family hospitality. When you dine with us, you're not just a guest — you're family. Our warm, welcoming atmosphere and attentive service are as much a part of the experience as the food itself.",
+    "yearsOfTradition": "Years of Tradition",
+    "authenticDishes": "Authentic Dishes",
+    "freshIngredients": "Fresh Ingredients"
+  },
+  "menu": {
+    "title": "Our Menu",
+    "subtitle": "Discover",
+    "description": "From aromatic starters to hearty mains, each dish is crafted with authentic Himalayan spices and the freshest ingredients.",
+    "loading": "Loading menu…"
+  },
+  "gallery": {
+    "subtitle": "Gallery",
+    "title": "A Visual Feast"
+  },
+  "order": {
+    "orderOnline": "Order Online",
+    "enjoyAtHome": "Enjoy at Home",
+    "description": "Can't make it to the restaurant? Order your favorite Himalayan dishes for delivery through Wolt, or call us for takeaway.",
+    "orderOnWolt": "Order on Wolt",
+    "callForTakeaway": "Call for Takeaway",
+    "info": "Delivery available through Wolt · Takeaway by phone: +358 44 777 3636"
+  },
+  "location": {
+    "title": "Find Us",
+    "subtitle": "Visit Our Restaurant",
+    "addressTitle": "Address",
+    "addressVal": "Westendintie 99 D\\n02160 Espoo, Finland",
+    "parking": "Near Tapiola",
+    "freeParking": "🅿️ Free Parking",
+    "hoursTitle": "Opening Hours",
+    "lunchServed": "Lunch served weekdays 10:30 – 15:00",
+    "callUs": "Call Us",
+    "getDirections": "Get Directions"
+  },
+  "footer": {
+    "description": "Authentic Himalayan cuisine crafted with love, fresh ingredients, and generations of tradition.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "parkingInfo": "Near Tapiola · Free parking",
+    "hours": "Hours",
+    "monThu": "Mon–Thu",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "followUs": "Follow Us",
+    "allRightsReserved": "All rights reserved.",
+    "comingSoon": "Coming soon"
+  },
+  "nav": {
+    "about": "Our Story",
+    "menu": "Menu",
+    "gallery": "Gallery",
+    "reserve": "Reservations",
+    "location": "Location"
+  }
+}

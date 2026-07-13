@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Work_Sans } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -122,13 +122,16 @@ function JsonLd() {
   );
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ lang: string }>;
 }>) {
+  const { lang } = await params;
   return (
-    <html lang="en" className={`h-full antialiased ${cormorant.variable} ${workSans.variable}`}>
+    <html lang={lang} className={`h-full antialiased ${cormorant.variable} ${workSans.variable}`}>
       <head>
         <JsonLd />
         <link rel="icon" href="/favicon.ico" sizes="any" />

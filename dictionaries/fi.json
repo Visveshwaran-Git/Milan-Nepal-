@@ -1,0 +1,82 @@
+{
+  "navbar": {
+    "home": "Etusivu",
+    "about": "Tietoa meistä",
+    "menu": "Ruokalista",
+    "gallery": "Galleria",
+    "location": "Sijainti",
+    "orderOnline": "Tilaa netistä"
+  },
+  "hero": {
+    "title": "Milan Nepal Westend Saptarangi",
+    "tagline": "Aromaattinen ja syvästi maustettu Himalajan keittiö — tuoreet ainesosat, huumaavat mausteet, eloisat värit",
+    "orderOnWolt": "Tilaa Woltista",
+    "scroll": "Vieritä"
+  },
+  "about": {
+    "ourStory": "Tarinamme",
+    "title1": "Makuja ",
+    "title2": "Himalajalta",
+    "p1_1": "Espoon Westendin sydämessä sijaitseva ",
+    "p1_strong": "Milan Nepal – Saptarangi",
+    "p1_2": " tuo Nepalin ja laajemman Himalajan alueen autotenttiset maut Suomeen. Nimemme, ",
+    "p1_em": "Saptarangi",
+    "p1_3": ", tarkoittaa \"seitsemää väriä\" — juhlistaen Himalajan keittiön eloisaa ja monisävyistä kirjoa.",
+    "p2": "Jokainen annos alkaa tuoreimmista ainesosista — käsin jauhetuista mausteseoksista, aromaattisista yrteistä ja sukupolvelta toiselle siirtyneistä perinteisistä resepteistä. Tandoor-grillatuista lihoista hitaasti haudutettuihin curryihin, jokainen lautanen on matka Kathmandun, Pokharan ja laajempien alueiden aromaattisiin keittiöihin.",
+    "p3": "Uskomme perhevieraanvaraisuuteen. Kun ruokailet kanssamme, et ole vain vieras — olet perhettä. Lämmin, kutsuva ilmapiirimme ja huomaavainen palvelumme ovat yhtä suuri osa elämystä kuin itse ruokakin.",
+    "yearsOfTradition": "Vuotta perinnettä",
+    "authenticDishes": "Autenttista annosta",
+    "freshIngredients": "Tuoreita aineksia"
+  },
+  "menu": {
+    "title": "Ruokalistamme",
+    "subtitle": "Tutustu",
+    "description": "Aromaattisista alkuruoista runsaisiin pääruokiin, jokainen annos on valmistettu aidoilla Himalajan mausteilla ja tuoreimmista aineksista.",
+    "loading": "Ladataan ruokalistaa…"
+  },
+  "gallery": {
+    "subtitle": "Galleria",
+    "title": "Visuaalinen nautinto"
+  },
+  "order": {
+    "orderOnline": "Tilaa netistä",
+    "enjoyAtHome": "Nauti kotona",
+    "description": "Etkö pääse ravintolaan? Tilaa suosikki Himalaja-annoksesi kotiinkuljetuksella Woltin kautta tai soita meille noutotilausta varten.",
+    "orderOnWolt": "Tilaa Woltista",
+    "callForTakeaway": "Soita ja tilaa nouto",
+    "info": "Kotiinkuljetus Woltin kautta · Noutotilaukset puhelimitse: +358 44 777 3636"
+  },
+  "location": {
+    "title": "Löydä meidät",
+    "subtitle": "Vieraile ravintolassamme",
+    "addressTitle": "Osoite",
+    "addressVal": "Westendintie 99 D\\n02160 Espoo, Finland",
+    "parking": "Lähellä Tapiolaa",
+    "freeParking": "🅿️ Ilmainen pysäköinti",
+    "hoursTitle": "Aukioloajat",
+    "lunchServed": "Lounas arkisin 10:30 – 15:00",
+    "callUs": "Soita meille",
+    "getDirections": "Hae reittiohjeet"
+  },
+  "footer": {
+    "description": "Aitoa Himalajan keittiötä rakkaudella, tuoreilla aineksilla ja sukupolvien perinteellä.",
+    "quickLinks": "Pikalinkit",
+    "contact": "Yhteystiedot",
+    "parkingInfo": "Lähellä Tapiolaa · Ilmainen pysäköinti",
+    "hours": "Aukioloajat",
+    "monThu": "Ma–To",
+    "friday": "Perjantai",
+    "saturday": "Lauantai",
+    "sunday": "Sunnuntai",
+    "followUs": "Seuraa meitä",
+    "allRightsReserved": "Kaikki oikeudet pidätetään.",
+    "comingSoon": "Tulossa pian"
+  },
+  "nav": {
+    "about": "Tarinamme",
+    "menu": "Ruokalista",
+    "gallery": "Galleria",
+    "reserve": "Varaukset",
+    "location": "Sijainti"
+  }
+}

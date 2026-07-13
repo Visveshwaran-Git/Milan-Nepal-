@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
 import MandalaDecor from "./MandalaDecor";
+import { useTranslation } from "./LanguageProvider";
 
 const galleryImages = [
   { src: "/images/food-1.jpg", alt: "Chicken Tikka platter with fresh herbs" },
@@ -18,6 +19,7 @@ const galleryImages = [
 ];
 
 export default function GallerySection() {
+  const dict = useTranslation();
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
 
   return (
@@ -26,10 +28,10 @@ export default function GallerySection() {
         <ScrollReveal>
           <div className="text-center">
             <p className="font-body text-sm font-semibold uppercase tracking-[0.3em] text-gold">
-              Gallery
+              {dict.gallery?.subtitle}
             </p>
             <h2 className="mt-3 font-heading text-4xl font-bold text-ivory sm:text-5xl">
-              A Visual Feast
+              {dict.gallery?.title}
             </h2>
             <MandalaDecor />
           </div>
