@@ -33,7 +33,7 @@ export default function OrderSection() {
           <div className="mt-10 flex flex-col items-center gap-5 sm:flex-row sm:justify-center">
             {/* Wolt Button */}
             <a
-              href="https://wolt.com/en/fin/espoo/restaurant/milan-nepal-saptarangi"
+              href="https://wolt.com/en/fin/espoo/restaurant/milan-nepal-ainoa?srsltid=AfmBOoo-fMlrNMxt5l6CnD9ZyVBpRkLVQlrq4legwcmz0-tAP9hHtrrU"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-h-[52px] items-center gap-3 rounded-sm bg-[#009DE0] px-8 py-3 font-body text-sm font-semibold uppercase tracking-widest text-white transition-all hover:bg-[#0089C7] active:scale-95 shadow-lg"

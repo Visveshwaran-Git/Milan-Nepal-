@@ -95,10 +95,10 @@ export default function Footer() {
             <div className="mt-6 flex gap-3">
               {/* Facebook */}
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/p/Milan-Nepal-Westend-Saptarangi-61566876674748/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-ivory/5 text-ivory/50 transition-all hover:bg-gold/10 hover:text-gold"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-charcoal-light text-ivory transition-all hover:bg-gold hover:text-charcoal"
                 aria-label="Facebook"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -106,24 +106,9 @@ export default function Footer() {
                 </svg>
               </a>
 
-              {/* Instagram */}
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-ivory/5 text-ivory/50 transition-all hover:bg-gold/10 hover:text-gold"
-                aria-label="Instagram"
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                </svg>
-              </a>
-
               {/* Wolt */}
               <a
-                href="https://wolt.com/en/fin/espoo/restaurant/milan-nepal-saptarangi"
+                href="https://wolt.com/en/fin/espoo/restaurant/milan-nepal-ainoa?srsltid=AfmBOoo-fMlrNMxt5l6CnD9ZyVBpRkLVQlrq4legwcmz0-tAP9hHtrrU"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-ivory/5 text-ivory/50 transition-all hover:bg-[#009DE0]/10 hover:text-[#009DE0]"
